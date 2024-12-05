@@ -90,3 +90,5 @@ publish/
 
 
 /.vs/TechChallenge
+**/bin/
+**/obj/
