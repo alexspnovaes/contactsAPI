@@ -10,8 +10,8 @@ namespace TechChallenge.Tests.Utilities
         public static ApplicationDbContext CreateInMemoryContext()
         {
             var options = new DbContextOptionsBuilder<ApplicationDbContext>()
-                .UseInMemoryDatabase(databaseName: "TechChallengeTestDb")
-                .Options;
+            .UseInMemoryDatabase(Guid.NewGuid().ToString())
+            .Options;
 
             var context = new ApplicationDbContext(options);
 

@@ -24,7 +24,7 @@ namespace TechChallenge.Tests.IntegrationTests.Repositories
         public async Task GetAllAsync_ShouldReturnAllContacts()
         {
             var contacts = await _repository.GetAllAsync();
-            Assert.Equal(4, contacts.Count());
+            Assert.Equal(2, contacts.Count());
         }
 
         [Fact]

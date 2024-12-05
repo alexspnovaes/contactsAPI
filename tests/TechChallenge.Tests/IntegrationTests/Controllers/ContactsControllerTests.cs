@@ -34,7 +34,7 @@ namespace TechChallenge.Tests.IntegrationTests.Controllers
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
             var contacts = Assert.IsAssignableFrom<IEnumerable<ContactModel>>(okResult.Value);
 
-            Assert.Equal(4, contacts.ToList().Count);
+            Assert.Equal(2, contacts.ToList().Count);
         }
 
         [Fact]
