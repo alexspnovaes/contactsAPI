@@ -39,8 +39,8 @@ app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
-app.UseHttpMetrics(); 
-app.UseMetricServer(); 
+app.UseHttpMetrics();
+app.MapMetrics();
 
 app.UseAuthorization();
 

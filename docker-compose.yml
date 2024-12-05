@@ -5,6 +5,8 @@ services:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
+    networks:
+      - prometheus-net
 
   grafana:
     image: grafana/grafana
@@ -19,3 +21,6 @@ services:
     ports:
       - "5000:5000"
       - "5001:5001" 
+networks:
+  prometheus-net:
+    driver: bridge
