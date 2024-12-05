@@ -15,9 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechChallenge.Tests", "test
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{5A988AF8-2B2F-4691-98AA-76E0B5164CF3}"
 	ProjectSection(SolutionItems) = preProject
-		docker-compose.yml = docker-compose.yml
-		Dockerfile = Dockerfile
+		prometheus.yml = prometheus.yml
 	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{A1150ED4-C0B4-47E3-A35F-9BB7C59E6F14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +46,10 @@ Global
 		{41AF9CF4-4B5E-4353-8D78-36E1C1093592}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41AF9CF4-4B5E-4353-8D78-36E1C1093592}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41AF9CF4-4B5E-4353-8D78-36E1C1093592}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1150ED4-C0B4-47E3-A35F-9BB7C59E6F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1150ED4-C0B4-47E3-A35F-9BB7C59E6F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1150ED4-C0B4-47E3-A35F-9BB7C59E6F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1150ED4-C0B4-47E3-A35F-9BB7C59E6F14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
