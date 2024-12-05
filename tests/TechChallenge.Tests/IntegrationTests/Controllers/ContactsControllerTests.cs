@@ -8,6 +8,8 @@ using TechChallenge.Application.Models;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Extensions.Logging;
+using Moq;
 
 namespace TechChallenge.Tests.IntegrationTests.Controllers
 {
@@ -20,8 +22,9 @@ namespace TechChallenge.Tests.IntegrationTests.Controllers
             var context = TestDbContextFactory.CreateInMemoryContext();
             var repository = new ContactRepository(context);
             var service = new ContactService(repository);
+            var loggerMock = new Mock<ILogger<ContactsController>>();
 
-            _controller = new ContactsController(service);
+            _controller = new ContactsController(service, loggerMock.Object);
         }
 
         [Fact]

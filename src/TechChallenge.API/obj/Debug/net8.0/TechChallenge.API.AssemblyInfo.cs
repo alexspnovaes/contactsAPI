@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TechChallenge.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83dd01dff6ada98634f54a8649c3ebef401f8e21")]
 [assembly: System.Reflection.AssemblyProductAttribute("TechChallenge.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TechChallenge.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
