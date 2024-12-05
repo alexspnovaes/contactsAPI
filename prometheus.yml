@@ -5,11 +5,11 @@ scrape_configs:
   - job_name: "dotnet-app"
     scheme: "https"
     static_configs:
-      - targets: 
-          - "host.docker.internal:5000" 
+      - targets:           
           - "host.docker.internal:5001" 
     tls_config:
       insecure_skip_verify: true
+
 
 
       
