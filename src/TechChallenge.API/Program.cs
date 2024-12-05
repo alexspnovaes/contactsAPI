@@ -1,4 +1,5 @@
-using Microsoft.EntityFrameworkCore;
+using Prometheus;
+using Prometheus.SystemMetrics;
 using TechChallenge.Api.Extensions;
 using TechChallenge.API.Logging;
 using TechChallenge.Domain.Entities;
@@ -23,7 +24,7 @@ builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderPro
 
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
-
+builder.Services.AddSystemMetrics();
 
 var app = builder.Build();
 
@@ -37,6 +38,9 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
+
+app.UseHttpMetrics(); 
+app.UseMetricServer(); 
 
 app.UseAuthorization();
 

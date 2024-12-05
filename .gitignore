@@ -92,3 +92,4 @@ publish/
 /.vs/TechChallenge
 **/bin/
 **/obj/
+/src/TechChallenge.API/obj/Debug/net8.0/TechChallenge.API.GeneratedMSBuildEditorConfig.editorconfig

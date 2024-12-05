@@ -36,7 +36,7 @@ namespace TechChallenge.API.Logging
 
         private void WriteTextFile(string message)
         {
-            string path = Environment.CurrentDirectory + $@"\LOG-{DateTime.Now:yyyy-MM-dd}.txt";
+            string path = $"/app/logs/LOG-{DateTime.Now:yyyy-MM-dd}.txt";
 
             if (!File.Exists(path))
             {
