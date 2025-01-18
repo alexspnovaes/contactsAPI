@@ -26,6 +26,14 @@ builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddSystemMetrics();
 
+if (builder.Environment.IsDevelopment())
+{
+    builder.WebHost.ConfigureKestrel(options =>
+    {
+        options.ListenAnyIP(5000); 
+    });
+}
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
@@ -37,7 +45,11 @@ using (var scope = app.Services.CreateScope())
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
+}
+
 
 app.UseHttpMetrics();
 app.MapMetrics();
@@ -45,6 +57,9 @@ app.MapMetrics();
 app.UseAuthorization();
 
 app.MapControllers();
+
+
+
 app.Run();
 
 void SeedDatabase(ApplicationDbContext context)
