@@ -1,3 +1,7 @@
+networks:
+  my_network:
+    driver: bridge
+
 services:
   prometheus:
     image: prom/prometheus
@@ -5,11 +9,15 @@ services:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
+    networks:
+      - my_network
 
   grafana:
     image: grafana/grafana
     ports:
       - "3000:3000"
+    networks:
+      - my_network
 
   techchallenge.api:
     image: ${DOCKER_REGISTRY-}techchallengeapi
@@ -18,4 +26,5 @@ services:
       dockerfile: src/TechChallenge.API/Dockerfile
     ports:
       - "5000:5000"
-      - "5001:5001" 
+    networks:
+      - my_network
